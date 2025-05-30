@@ -1,20 +1,8 @@
-gryffindor = 0
-Ravenclaw = 0
-HUfflepuff = 0
-Slytherin = 0
-
-print("QUIZ")
-
-print("""Q1) Do you like Dawn or Dusk?
-    1) Dawn
-    2) Dusk""")
-ans = int(input("enter the ans :"))    
-if ans == 1:
-  gryffindor = gryffindor+1
-  Ravenclaw = Ravenclaw+1
-elif ans ==2:
-  HUfflepuff = HUfflepuff+1
-Slytherin = Slytherin+1
-else:
-  print("WRONG INPUT")
-  
+n = int(input("Enter the number: "))
+for row in range(n):
+    for col in range(n):
+        if col == 0 or row == col - n//2 or row == n - col - 1:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
